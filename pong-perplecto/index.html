@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong - Jogo Clássico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>Pong</h1>
+            <div class="score-display">
+                <div class="player-score">
+                    <span class="player-label">Jogador 1 (W/S)</span>
+                    <span class="score" id="leftScore">0</span>
+                </div>
+                <div class="separator">:</div>
+                <div class="player-score">
+                    <span class="player-label">Jogador 2 (↑/↓)</span>
+                    <span class="score" id="rightScore">0</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="canvas-container">
+            <canvas id="gameCanvas" width="800" height="400"></canvas>
+        </div>
+        
+        <div class="controls-info">
+            <div class="control-group">
+                <h3>Controles</h3>
+                <div class="controls-grid">
+                    <div class="control-item">
+                        <strong>Jogador 1:</strong> W (subir) / S (descer)
+                    </div>
+                    <div class="control-item">
+                        <strong>Jogador 2:</strong> ↑ (subir) / ↓ (descer)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
