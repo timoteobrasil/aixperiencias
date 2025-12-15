@@ -8,66 +8,20 @@
   </head>
   <body>
     <div class="container">
-      <div class="header">
-        <h1>🎮 Sudoku Game</h1>
+      <div id="header">
+        <h1>Sudoku Perplecto</h1>
+        <p class="info">
+          Um jogo de Sudoku interativo com geração e reprodução de passos.
+        </p>
       </div>
-
-      <div class="setup-section">
-        <label for="initString"
-          >Insira a string de inicialização (81 caracteres):</label
-        >
-        <textarea
-          id="initString"
-          placeholder="Digite 81 caracteres. Use dígitos 1-9 para preencher células ou qualquer outro caractere para células vazias."
-        ></textarea>
-        <div class="error-message" id="errorMessage"></div>
-      </div>
-
-      <div class="button-group">
-        <button onclick="initializeSudoku()">Começar Jogo</button>
-        <button class="secondary" onclick="resetToSetup()">Limpar</button>
-      </div>
-
-      <div class="sudoku-grid" id="sudokuGrid"></div>
-
-      <div class="controls" id="controls">
-        <div class="control-section">
-          <label for="digitInput">Dígito ou Notas:</label>
-          <input
-            type="text"
-            id="digitInput"
-            placeholder="1-9 ou anotações"
-            maxlength="9"
-          />
-        </div>
-        <button
-          class="toggle-notes"
-          id="toggleNotesBtn"
-          onclick="toggleNotesMode()"
-        >
-          Modo Notas
-        </button>
-        <button class="secondary" onclick="deleteCell()">Apagar</button>
-        <button
-          class="secondary"
-          onclick="resetToSetup()"
-          style="flex: 0 0 auto"
-        >
-          Reiniciar
-        </button>
-      </div>
-
-      <div class="info" id="info"></div>
-    </div>
-
-    <div class="victory-modal" id="victoryModal">
-      <div class="victory-content">
-        <h2>🎉 Parabéns!</h2>
-        <p>Você resolveu o Sudoku corretamente!</p>
-        <button onclick="resetToSetup()">Jogar Novamente</button>
+      <canvas id="sudokuCanvas" width="450" height="450"></canvas>
+      <div class="controls">
+        <button id="solveBtn">Gerar passos</button>
+        <button id="playBtn">Reproduzir passos</button>
       </div>
     </div>
-
-    <script src="script.js"></script>
+    <script src="sudoku-solver.js"></script>
+    <script src="animations.js"></script>
+    <script src="sudoku-view.js"></script>
   </body>
 </html>
